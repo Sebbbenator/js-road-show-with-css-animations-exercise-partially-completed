@@ -17,21 +17,28 @@ const soundBlueCar = new Audio("sound/bluecarsound.wav");
 
 // Funktioner til animationer og lyd
 if (getRedCar) {
-  getRedCar.style.cursor = "pointer";
+  //   getRedCar.style.cursor = "pointer"; lavet i css med id #redCar også cursor:pointer
   getRedCar.addEventListener("click", () => {
-     soundRedCar.play();
+    soundRedCar.play();
   });
-}   
+}
 
 if (getBlueCar) {
   getBlueCar.style.cursor = "pointer";
   getBlueCar.addEventListener("click", () => {
     soundBlueCar.play();
   });
-}   
+}
 if (getPoliceCar) {
   getPoliceCar.style.cursor = "pointer";
   getPoliceCar.addEventListener("click", () => {
     soundPoliceSiren.play();
+  });
+}
+
+// skift mellem dag og nat
+if (sun && scene) {
+  sun.addEventListener("click", () => {
+    scene.classList.toggle("night");
   });
 }

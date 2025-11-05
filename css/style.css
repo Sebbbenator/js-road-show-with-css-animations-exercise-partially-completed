@@ -169,3 +169,8 @@
     transform: translateX(calc(100vw + var(--off-car3))) rotateY(180deg);
   }
 }
+
+
+#redCar {
+  cursor: pointer;
+}
