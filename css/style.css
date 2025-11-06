@@ -144,9 +144,13 @@
 }
 
 @keyframes car2 {
-   0% {transform: translateX(0) rotateY(180deg);}
-   90%,
-   100% {transform: translateX(calc(-100vw - var(--off-car2))) rotateY(180deg);}
+  0% {
+    transform: translateX(0) rotateY(180deg);
+  }
+  90%,
+  100% {
+    transform: translateX(calc(-100vw - var(--off-car2))) rotateY(180deg);
+  }
 }
 
 /* car3: venstre → højre (spejlvendt) */
@@ -170,7 +174,46 @@
   }
 }
 
-
 #redCar {
   cursor: pointer;
+}
+
+/* simoncar */
+.simoncar {
+  position: absolute;
+  bottom: -3.4vh;
+  width: var(--car-w);
+  max-width: 28vw;
+  z-index: 1;
+  left: calc(-1 * var(--off-car3));
+  animation: simoncar 20s linear infinite;
+}
+
+@keyframes simoncar {
+  0% {
+    transform: translateX(0) rotateY(180deg);
+  }
+  100% {
+    transform: translateX(calc(100vw + var(--off-car3))) rotateY(180deg);
+  }
+}
+
+.tungcar {
+  position: absolute;
+  bottom: 2.8vh;
+  width: var(--car-w);
+  max-width: 28vw;
+  right: calc(-1 * var(--off-car2));
+  z-index: 1;
+  animation: tungcar 4s linear infinite;
+}
+
+@keyframes tungcar {
+  0% {
+    transform: translateX(0)
+  }
+  90%,
+  100% {
+    transform: translateX(calc(-100vw - var(--off-car2)));
+  }
 }
